@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!-- RES ONE Automation Building Blocks -->
+<!-- Created by kwiski\administrator on 1/2/2017 11:27:37 PM -->
+<AutomationManager>
+	<buildingblock version="3.0">
+		<projects/>
+		<modules>
+			<module>
+				<properties>
+					<guid>{C07B4875-67B0-4B66-88EA-7EBF8B69D2A4}</guid>
+					<name>TOPDesk Get lists</name>
+					<enabled>yes</enabled>
+					<description/>
+					<version>1.0.2</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>Archive</name>
+							<description/>
+							<guid>{2036FF7C-B232-4DD7-B252-0468A1C8B952}</guid>
+							<folder>
+								<name>TOPdesk</name>
+								<description/>
+								<guid>{C4EEA72E-BA8F-4505-BBE7-F317844A4C33}</guid>
+							</folder>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>TOPdesk list values</name>
+								<value1>urgencies</value1>
+								<value2>call_types;categories;closure_codes;impacts;subcategories;urgencies</value2>
+								<value3>Call Type;Categories;Closure Codes;impacts;subcategories;urgencies</value3>
+								<type>1</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>yes</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>TOPdeskURL</name>
+								<value1>^[TOPDeskURL]</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>UserName</name>
+								<value1>^[TOPDesk Admin]</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Password</name>
+								<value1 encrypted="no">^[TOPDesk Password]</value1>
+								<value2/>
+								<value3/>
+								<type>5</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Results</name>
+								<value1/>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{19DD0AD8-C079-4583-91CA-3BE7D3D1E12D}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer><variables><variable><guid>{5B71DA96-59D1-47AF-993E-6E4DD872E489}</guid><name>TOPDeskURL</name><description/><type>0</type><parentguid>{00000000-0000-0000-0000-000000000000}</parentguid><details><value1>https://ressoftware.topdesk.net</value1></details></variable><variable><guid>{D72C4A46-A1F6-43C6-B537-ED69DED9FCA4}</guid><name>TOPDesk Admin</name><description/><type>0</type><parentguid>{00000000-0000-0000-0000-000000000000}</parentguid><details><value1>M.Kwiecinski@res.com</value1></details></variable><variable><guid>{76DC62C4-1EA0-4F88-951A-FF8C973471D1}</guid><name>TOPDesk Password</name><description/><type>1</type><parentguid>{00000000-0000-0000-0000-000000000000}</parentguid><details><value1>0063009400CD00BD0071011400A4011A</value1></details></variable></variables></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>PWRSHELL</type>
+							<guid>{19DD0AD8-C079-4583-91CA-3BE7D3D1E12D}</guid>
+							<description>Execute Windows PowerShell Script</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<username/>
+							<password encrypted="yes"/>
+							<usescript>yes</usescript>
+							<source>#basic script to query TOPdesk instance for custoemr specific incident values. 
+#Use when building RES ONE Service Store services to quickly have values on hand.
+
+ add-type @"
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+public class TrustAllCertsPolicy : ICertificatePolicy {
+    public bool CheckValidationResult(
+    ServicePoint srvPoint, X509Certificate certificate,
+    WebRequest request, int certificateProblem) {
+        return true;
+    }
+}
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+
+$TOPdeskUrl = "$[TOPdeskURL]"
+$username = "$[UserName]"
+$password = "$[Password]"
+$ListtoRetrieve = "$[TOPdesk list values]"
+
+
+$baseUri = $TOPdeskUrl+"/tas/api"
+
+$results =""
+$output = ""
+
+$token = Invoke-RestMethod -Method Get -Uri ($baseUri+"/login/operator") -Headers @{"Authorization" = "Basic "+[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($username+":"+$password ))}
+
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("Authorization", "TOKEN id=`"$token`"")
+$output = ""
+
+
+$results = Invoke-RestMethod -Method Get -Uri ($baseUri+"/incidents/"+$ListtoRetrieve) -Headers $headers -ContentType 'application/json'
+
+
+foreach($result in $results) {
+    
+    $output += $result.name +';' + $result.id + '|'
+
+}
+ 
+$output = $output -replace ".$"
+
+Write-Host $output</source>
+							<scriptext>ps1</scriptext>
+							<outputwidth>80</outputwidth>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<setoutparameter parse="no">$[Results]</setoutparameter>
+							<snapins/>
+							<overrideexecutionpolicy>no</overrideexecutionpolicy>
+							<usex86psonx64>no</usex86psonx64>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+		</modules>
+		<resources/>
+		<runbooks/>
+		<teams/>
+		<projectfolders/>
+		<modulefolders/>
+		<resourcefolders/>
+		<runbookfolders/>
+		<teamfolders/>
+	</buildingblock>
+</AutomationManager>
