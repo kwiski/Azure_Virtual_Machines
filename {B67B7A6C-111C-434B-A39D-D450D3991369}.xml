@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!-- Ivanti Automation Building Blocks -->
+<!-- Created by kwiski\mkwiecinski_adm on 4/23/2021 10:21:42 AM -->
+<AutomationManager>
+	<buildingblock version="3.0" bbpwh="e5PBeb+Bac1LhYmpTiYdCQ==:20000:9NCoyaoBkkT5EphpsW1DUhmLnHomCKprDzCbwDJ63xo=">
+		<projects/>
+		<modules>
+			<module>
+				<properties>
+					<guid>{B67B7A6C-111C-434B-A39D-D450D3991369}</guid>
+					<name>Twilio: Send SMS Message - REST</name>
+					<enabled>yes</enabled>
+					<description/>
+					<version>1.0.7</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>Twilio</name>
+							<description/>
+							<guid>{17A53F28-E869-4B60-AD3B-025C96A29914}</guid>
+							<folder>
+								<name>Source Modules</name>
+								<description/>
+								<guid>{2EA328B1-8D32-4036-836D-3CFF59F6FF23}</guid>
+							</folder>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>Mobile Phone</name>
+								<value1>
+								</value1>
+								<value2>
+								</value2>
+								<value3>
+								</value3>
+								<type>0</type>
+								<description>
+								</description>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+								</selection>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Message</name>
+								<value1>
+								</value1>
+								<value2>
+								</value2>
+								<value3>
+								</value3>
+								<type>0</type>
+								<description>
+								</description>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+								</selection>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Twiio Auth Token</name>
+								<value1>^[Twilio Auth Token]</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Twilio Account SID</name>
+								<value1>^[Twilio Account SID]</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Twilio Phone Number</name>
+								<value1>^[Twilio Phone Number (US)]</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{2A6B7664-2C56-481C-9A61-2D211A7ED4AC}">
+								<expressions>
+								</expressions>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer><categories><category><guid>{E90BD4D6-2857-42FF-9E9D-502AB30655C4}</guid><name>Twilio</name></category></categories><variables><variable><guid>{FAADA89F-840B-4817-A05F-8E76C5ACA733}</guid><name>Twilio Auth Token</name><description/><type>1</type><parentguid>{E90BD4D6-2857-42FF-9E9D-502AB30655C4}</parentguid><details>
+										<value1></value1>
+									</details>
+								</variable><variable><guid>{087D7DC8-488A-4FA8-9C8C-6FC2D2D2E3BB}</guid><name>Twilio Account SID</name><description/><type>1</type><parentguid>{E90BD4D6-2857-42FF-9E9D-502AB30655C4}</parentguid><details>
+										<value1></value1>
+									</details>
+								</variable><variable><guid>{180FFBF2-3718-45BF-8BCD-98AC949D66AF}</guid><name>Twilio Phone Number (US)</name><description/><type>0</type><parentguid>{E90BD4D6-2857-42FF-9E9D-502AB30655C4}</parentguid><details>
+										<value1>+16108548758</value1>
+									</details>
+								</variable></variables></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>PWRSHELL</type>
+							<guid>{2A6B7664-2C56-481C-9A61-2D211A7ED4AC}</guid>
+							<description>Execute Windows PowerShell Script</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<username/>
+							<password encrypted="yes">{015d45e3-c3ab-45e8-98e2-941328a099c8;s=00059;v=1;m=aes256}rZW1myM4r/+Yjs9JYDmWck/j3vHxJU1EKMhqLKG9iRI=</password>
+							<usescript>yes</usescript>
+							<source>
+
+
+$sid = "$[Twilio Account SID]"
+$token = "$[Twiio Auth Token]"
+$number = "$[Twilio Phone Number]"
+
+
+$url = "https://api.twilio.com/2010-04-01/Accounts/$sid/Messages.json"
+
+$params = @{ To = "$[Mobile Phone]"; From = $number; Body = "$[Message]" }
+
+# Create a credential object for HTTP basic auth
+$p = $token | ConvertTo-SecureString -asPlainText -Force
+$credential = New-Object System.Management.Automation.PSCredential($sid, $p)
+
+# Make API request, selecting JSON properties from response
+Invoke-WebRequest $url -Method Post -Credential $credential -Body $params -UseBasicParsing | ConvertFrom-Json | Select sid, body</source>
+							<scriptext>ps1</scriptext>
+							<outputwidth>80</outputwidth>
+							<validateexitcode>no</validateexitcode>
+							<failifexitcode>no</failifexitcode>
+							<exitcodes>0</exitcodes>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<snapins/>
+							<overrideexecutionpolicy>no</overrideexecutionpolicy>
+							<usex86psonx64>no</usex86psonx64>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+		</modules>
+		<resources/>
+		<runbooks/>
+		<teams/>
+		<projectfolders/>
+		<modulefolders/>
+		<resourcefolders/>
+		<runbookfolders/>
+		<teamfolders/>
+	</buildingblock>
+</AutomationManager>
