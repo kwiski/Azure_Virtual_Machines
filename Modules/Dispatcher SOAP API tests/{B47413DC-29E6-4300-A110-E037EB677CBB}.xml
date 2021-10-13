@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!-- Ivanti Automation Building Blocks -->
+<!-- Created by kwiski\mkwiecinski_adm on 10/13/2021 6:43:07 AM -->
+<AutomationManager>
+	<buildingblock version="3.0" bbpwh="+ofIoK5GsQ87lP83pJJndw==:20000:R/Yq2PNgizJwDCLm80GQA7W2hnJfCRjdKp0IcJUXH0c=">
+		<projects/>
+		<modules>
+			<module>
+				<properties>
+					<guid>{B47413DC-29E6-4300-A110-E037EB677CBB}</guid>
+					<name>SOAP API Test - Wait loop</name>
+					<enabled>yes</enabled>
+					<description>Simpel sleep wait loop to test finding in progress job via Dispatcher api</description>
+					<version>1.0.3</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>Dispatcher SOAP API tests</name>
+							<description/>
+							<guid>{6F6C4B4C-98B7-4E6C-A356-65445F514B04}</guid>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>start</name>
+								<value1>0</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Max</name>
+								<value1>30</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>step</name>
+								<value1>5</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Dummy Output</name>
+								<value1>Dummy Output</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>yes</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{C7731F78-C5AF-46F6-B12D-98E21C0A0557}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>PWRSHELL</type>
+							<guid>{C7731F78-C5AF-46F6-B12D-98E21C0A0557}</guid>
+							<description>Execute Windows PowerShell Script</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<username/>
+							<password encrypted="yes">{015d45e3-c3ab-45e8-98e2-941328a099c8;s=00059;v=1;m=aes256}oW4EHs8AqoWc/4yKS82bCs4zqdI34conXbJWSzhE6ms=</password>
+							<usescript>yes</usescript>
+							<source>$start=$[start]
+$max=$[Max]
+$step= $[step]
+
+while ($start -le $max) {
+	## Wait a specific interval
+    Start-Sleep -Seconds $step
+    Write-output "$start `n"
+    $start+=$step
+}</source>
+							<scriptext>ps1</scriptext>
+							<outputwidth>16386</outputwidth>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<snapins/>
+							<overrideexecutionpolicy>no</overrideexecutionpolicy>
+							<usex86psonx64>no</usex86psonx64>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+		</modules>
+		<resources/>
+		<runbooks/>
+		<teams/>
+		<projectfolders/>
+		<modulefolders/>
+		<resourcefolders/>
+		<runbookfolders/>
+		<teamfolders/>
+	</buildingblock>
+</AutomationManager>
